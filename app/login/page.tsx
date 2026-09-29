@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Wallet } from 'lucide-react';
 import { entrar, cadastrar } from './actions';
 
 export default async function LoginPage({
@@ -13,10 +14,10 @@ export default async function LoginPage({
     <main className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-emerald-50 via-white to-sky-50 text-slate-900">
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg border border-slate-200 p-8">
         <div className="flex items-center gap-2 mb-6">
-          <div className="h-9 w-9 rounded-lg bg-emerald-600 text-white grid place-items-center font-bold">
-            $
+          <div className="h-10 w-10 rounded-xl bg-emerald-600 text-white grid place-items-center">
+            <Wallet className="h-5 w-5" />
           </div>
-          <span className="text-lg font-semibold">FinanceWallet</span>
+          <span className="text-lg font-semibold">Carteira Financeira</span>
         </div>
 
         <h1 className="text-2xl font-bold">
