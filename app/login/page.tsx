@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Wallet } from 'lucide-react';
+import { ThemeToggle } from '@/app/dashboard/components/ThemeToggle';
 import { entrar, cadastrar } from './actions';
 
 export default async function LoginPage({
@@ -11,7 +12,11 @@ export default async function LoginPage({
   const cadastro = modo === 'cadastro';
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-emerald-50 via-white to-sky-50 text-slate-900">
+    <main className="relative min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-emerald-50 via-white to-sky-50 text-slate-900">
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
+
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg border border-slate-200 p-8">
         <div className="flex items-center gap-2 mb-6">
           <div className="h-10 w-10 rounded-xl bg-emerald-600 text-white grid place-items-center">

@@ -8,6 +8,7 @@ import { sair } from '@/app/login/actions';
 import { definirMeta, excluirMeta } from '@/app/actions/transacoes';
 import { moeda, mesAtual, moverMes, rotuloMes } from '@/lib/formatar';
 import { CATEGORIAS_DESPESA, COR } from '@/lib/categorias';
+import { ThemeToggle } from '@/app/dashboard/components/ThemeToggle';
 import { CardTransacao, type Transacao } from './components/CardTransacao';
 import { IconeCategoria } from './components/IconeCategoria';
 
@@ -97,6 +98,7 @@ export default async function DashboardPage({
           </div>
 
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <span className="hidden md:inline text-sm text-slate-500 mr-1">{email}</span>
             <Link
               href="/dashboard/nova-transacao"
